@@ -4,21 +4,125 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>옛새친구 :: 신입생의 아싸탈출 지름길</title>
     <link href="https://fonts.googleapis.com/css?family=Gugi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,900&display=swap" rel="stylesheet">
     <LINK href="style.css" rel="stylesheet" type="text/css">
+      <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.0.min.js" ></script>
+<script type="text/javascript">
+$(document).ready(function () {
+
+  $('.scroll').hide();
+
+
+    $('.sebu').click(function () {
+
+      var univ = $('#univ').val();
+      var school = $('#school').val();
+      var year = $('#year').val();
+
+      $('#res').html(univ+"에 다니는 "+year+" "+school+" 졸업생 친구들");
+      var state = $('.scroll').is(':visible');
+
+      $('.scroll')[state?'hide':'slideDown'](state ? 0 : 'slow');
+    });
+});
+</script>
   </head>
   <body>
+
     <header>
       <div class="logo">
         <p>옛새친구</p>
         <p class="exp">대학교 친구, 동창부터 찾아볼까?</p>
       </div>
       <div class="search">
-        <input type="text" placeholder="소속대학교">
-        <input type="text" placeholder="졸업학교">
-        <input type="text" placeholder="졸업년도">
-        <button type="button" name="button" onclick="buttonfunc()">검색</button>
+        <input id="univ" type="text" placeholder="소속대학교">
+        <input id="school" type="text" placeholder="졸업학교">
+        <input id="year" type="text" placeholder="졸업년도">
+        <button type="button" class="sebu" name="button">검색</button>
       </div>
-      <p class="notice">※ 지금은 프론트만 했지만 나중에는<br>실제로 학교를 검색해서 결과가 출력되게 할 예정</p>
+      <p class="notice">※ 컨셉 프론트이므로 기능은 구현되지 않았음.
+        <br>※ 같은 학교에 다니는 동창 유저들을 검색하는 서비스
+      </p>
     </header>
+
+    <div class="scroll">
+      <div class="content">
+        <div class="conhead">
+          <p class="res" id="res"></p>
+        </div>
+        <div class="lists">
+          <p class="classnum">6-1</p>
+
+            <div class="user" id="user1">
+              <img src="img/pengzzi.jpg">
+              <div class="info">
+                <li class="name">김펭찌</li>
+                <li>컴퓨터과학과</li>
+                <li>facebook: @pengzzi</li>
+                <li>instagram: @peng_pic</li>
+              </div>
+            </div>
+
+            <p class="classnum">6-2</p>
+
+            <div class="user" id="user2">
+              <img src="img/tozzi.jpg">
+              <div class="info">
+                <li class="name">최토찌</li>
+                <li>심리학과</li>
+                <li>facebook: @tozzi</li>
+                <li>instagram: @to_pic</li>
+              </div>
+            </div>
+
+            <div class="user" id="user3">
+              <img src="img/mango.jpg">
+              <div class="info">
+                <li class="name">송망고</li>
+                <li>패션디자인과</li>
+                <li>facebook: @mango</li>
+                <li>instagram: @mang_pic</li>
+              </div>
+            </div>
+
+            <p class="classnum">6-3</p>
+
+            <div class="user" id="user4">
+              <img src="img/ddalgi.jpg">
+              <div class="info">
+                <li class="name">박딸기</li>
+                <li>작곡과</li>
+                <li>facebook: @ddalgi</li>
+                <li>instagram: @straw_pic</li>
+              </div>
+            </div>
+
+            <div class="user" id="user5">
+              <img src="img/bluetang.jpg">
+              <div class="info">
+                <li class="name">블루탱</li>
+                <li>건축과</li>
+                <li>facebook: @bluetang</li>
+                <li>instagram: @blue_pic</li>
+              </div>
+            </div>
+
+            <div class="user" id="user6">
+              <img src="img/pengdduck.jpg">
+              <div class="info">
+                <li class="name">임펭떡</li>
+                <li>식품공학과</li>
+                <li>facebook: @pengdduck</li>
+                <li>instagram: @dduck_pic</li>
+              </div>
+            </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+
   </body>
 </html>
